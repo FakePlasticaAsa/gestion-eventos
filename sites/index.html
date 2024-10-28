@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meetup 'n' Fun</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../script/template.js"></script> 
+    <script src="../script/scripts.js"></script> 
+</head>
+<style>
+    @keyframes backgroundAnimation {
+        0% {
+            background: linear-gradient(120deg, rgba(255, 0, 150, 0.8), rgba(0, 204, 255, 0.8));
+        }
+        100% {
+            background: linear-gradient(120deg, rgba(0, 204, 255, 0.8), rgba(255, 0, 150, 0.8));
+        }
+    }
+    .hero {
+        animation: backgroundAnimation 10s infinite alternate;
+    }
+        html {
+            scroll-behavior: smooth;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .fade-in {
+            animation: fadeIn 2s ease forwards; 
+        }
+
+        
+</style>
+<body class="">
+    <header id="header"></header>
+    <div class="hero flex justify-center items-center h-screen">
+    <h1 class="text-white text-5xl font-bold transform transition-transform duration-500 hover:scale-110 animate-pulse">
+        ¡Encuentra tu próximo evento!
+    </h1>
+</div>
+
+<!--
+    Cartas para la inscripción !!!
+-->
+
+<h1 class="text-white flex justify-center text-4xl p-16 bg-blue-950">Eventos Destacados</h1>
+
+
+<div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 p-6 bg-blue-950">
+        
+    <div class="bg-blue-100 p-8 min-h-[350px] flex flex-col justify-center items-center rounded-lg fade-in delay-100">
+        <h1 class="pb-1 text-2xl mb-10">Torneo eSport Valorant</h1>
+        <p class="pb-10 text-center">Participa en este torneo de Valorant y demuestra tu habilidad en uno de los FPS más populares.</p>
+        <a href="valorant.html">
+        <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600">
+            Inscribirse
+        </button>  
+    </a>
+    </div>
+    
+    <div class="bg-blue-100 p-8 min-h-[350px] flex flex-col justify-center items-center rounded-lg fade-in delay-200">
+        <h1 class="pb-1 text-2xl mb-10">Tour Edinburgh</h1>
+        <p class="pb-10 text-center">Explora los lugares históricos y encantadores de Edimburgo en un tour guiado.</p>
+        <a href="tour.html">
+        <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600">
+            Inscribirse
+        </button> 
+    </a> 
+    </div>
+    
+    <div class="bg-blue-100 p-8 min-h-[350px] flex flex-col justify-center items-center rounded-lg fade-in delay-300">
+        <h1 class="pb-1 text-2xl mb-10">Taller de Alfombras</h1>
+        <p class="pb-10 text-center">Aprende a crear alfombras únicas con técnicas tradicionales en este taller práctico.</p>
+        <a href="alfombra.html">
+        <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600">
+            Inscribirse
+        </button>  
+    </a>
+    </div>
+    
+    <div class="bg-blue-100 p-8 min-h-[350px] flex flex-col justify-center items-center rounded-lg fade-in delay-400">
+        <h1 class="pb-1 text-2xl mb-10">Tips Maquillaje y Moda</h1>
+        <p class="pb-10 text-center">Descubre consejos de maquillaje y moda para mejorar tu estilo y confianza.</p>
+        <a href="makeup.html">
+        <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600">
+            Inscribirse
+        </button>  
+        </a>
+    </div>
+    
+    <div class="bg-blue-100 p-8 min-h-[350px] flex flex-col justify-center items-center rounded-lg fade-in delay-500">
+        <h1 class="pb-1 text-2xl mb-10">Grupo de Lectura</h1>
+        <p class="pb-10 text-center">Únete a un grupo de lectura mensual y comparte tus opiniones sobre diversos libros.</p>
+        <a href="lectura.html">
+        <button class="bg-blue-500 text-white font-bold py-2 px-4 rounded hover:bg-blue-600">
+            Inscribirse
+        </button>  
+    </a>
+    </div>
+
+</div>
+<!--
+    Formulario de búsqueda !!!    
+-->
+
+<div id="eventos" class=" hero pt-28 pb-28 flex justify-center">
+    <form class="p-8 rounded-lg shadow-md w-full max-w-lg bg-blue-100">
+        <h2 class="text-2xl font-bold mb-6 text-center">Buscar Eventos</h2>
+
+        <div class="mb-4">
+            <label for="fecha" class="block text-gray-700">Fecha</label>
+            <input type="date" id="fecha" class="mt-1 block w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-300">
+        </div>
+
+        <div class="mb-4">
+            <label for="tipo" class="block text-gray-700">Tipo de Evento</label>
+            <select id="tipo" class="mt-1 block w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-300">
+                <option value="">Seleccione un tipo</option>
+                <option value="cultural">Cultural</option>
+                <option value="deportivo">Deportivo</option>
+                <option value="musical">Musical</option>
+                <option value="educativo">Educativo</option>
+                <option value="moda">Moda</option>
+                <option value="tour">Tour</option>
+            </select>
+        </div>
+
+        <div class="mb-4">
+            <label for="ubicacion" class="block text-gray-700">Ubicación</label>
+            <input type="text" id="ubicacion" placeholder="Ej. Barcelona" class="mt-1 block w-full p-2 border border-gray-300 rounded focus:outline-none focus:ring focus:ring-blue-300">
+        </div>
+
+        <button type="submit" class="w-full bg-blue-500 text-white font-bold py-2 rounded hover:bg-blue-600 transition duration-200">
+            Buscar
+        </button>
+    </form>
+
+</div>
+
+
+
+
+    <footer id="footer"></footer>
+</body>
+</html>
