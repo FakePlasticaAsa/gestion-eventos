@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../script/template.js"></script>
+    <title>Moda y Maquillaje</title>
+</head>
+
+<body class="bg-zinc-950">
+    <header id="header"></header>
+    <h1 class="text-white text-5xl flex justify-center p-12">Moda y Maquillaje</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-6">
+
+        <!-- Sección 1 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-all duration-300">
+            <img src="../img/moda1.webp" alt="Imagen de moda 1" class="w-full h-[516px]">
+            <h2 class="p-4 text-lg font-bold bg-gray-500">Tendencias en Ropa de Verano</h2>
+        </div>
+
+        <!-- Sección 2 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-all duration-300">
+            <img src="../img/maquillaje1.avif" alt="Imagen de maquillaje 1" class="w-full h-auto">
+            <h2 class="p-4 text-lg font-bold bg-gray-500">Maquillaje Natural</h2>
+        </div>
+
+        <!-- Sección 3 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-all duration-300">
+            <img src="../img/moda2.jpg" alt="Imagen de moda 2" class="w-full h-auto">
+            <h2 class="p-4 text-lg font-bold bg-gray-500">Estilo Casual para el Día</h2>
+        </div>
+
+        <!-- Sección 4 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-all duration-300">
+            <img src="../img/maquillaje2.jpg" alt="Imagen de maquillaje 2" class="w-full h-auto">
+            <h2 class="p-4 text-lg font-bold bg-gray-500">Maquillaje de Noche Glam</h2>
+        </div>
+    </div>
+
+    <div>
+        <h1 class="text-white text-3xl flex justify-center p-12">Descubre lo Último en Moda y Maquillaje</h1>
+        <p class="text-white text-xl flex justify-center m-12 mb-32">Explora nuestra colección de consejos y tendencias en moda y maquillaje. Desde looks casuales para el día hasta maquillaje glamuroso para la noche, aquí encontrarás todo lo que necesitas para destacar. Atrévete a experimentar con nuevos estilos y técnicas de maquillaje para realzar tu belleza y expresar tu personalidad. ¡Únete a nosotros y transforma tu estilo!</p>
+    </div>
+
+    <div class="bg-gray-100 p-8 rounded-lg shadow-md max-w-md mx-auto mb-32">
+        <h2 class="text-2xl font-bold text-center mb-6">Suscríbete para Recibir Novedades</h2>
+        <form action="#" method="POST">
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700 font-bold mb-2">Nombre:</label>
+                <input type="text" id="name" name="name" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Ingresa tu nombre">
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-bold mb-2">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Ingresa tu correo electrónico">
+            </div>
+            <div class="flex items-center justify-between">
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    Suscribirse
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <footer id="footer"></footer>
+</body>
+
+</html>

@@ -1,24 +1,99 @@
-<header class="flex items-center justify-between p-4 bg-blue-950	 text-white">
-    <!-- Logo -->
-    <div class="flex items-center">
-      <img src="../img/balloon.png" alt="Logo" class="h-16 w-16 mr-3">
-      <span class="text-xl font-semibold">MeetUp 'n' Fun</span>
-    </div>
-  
-    <!-- Navigation -->
-    <nav class="hidden md:flex space-x-6 mr-5">
-      <a href="../sites/index.html" class="hover:text-blue-200">Inicio</a>
-      <a href="#eventos" class="hover:text-blue-200">Eventos</a>
-      <a href="#contacto" class="hover:text-blue-200">Contacto</a>
-      <a href="#perfil" class="hover:text-blue-200">Perfil</a>
-    </nav>
-  
-    <!-- Mobile Menu Icon -->
-    <div class="md:hidden">
-      <button id="menu-button" class="focus:outline-none">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
-    </div>
-  </header>
+<header class="flex items-center justify-between p-4 bg-blue-950 text-white">
+  <!-- Logo -->
+  <div class="flex items-center">
+    <img src="../img/balloon.png" alt="Logo" class="h-12 w-12 md:h-16 md:w-16 mr-3">
+    <span class="text-lg md:text-xl font-semibold">MeetUp 'n' Fun</span>
+  </div>
+
+  <!-- Mobile Menu Button -->
+  <div class="md:hidden">
+    <button id="menu-button" class="focus:outline-none">
+      <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Navigation (hidden on mobile, visible on desktop) -->
+  <nav id="navbar" class="hidden md:flex space-x-6 mr-5">
+    <a href="../sites/index.html" class="hover:text-blue-200">Inicio</a>
+    <a href="#eventos" class="hover:text-blue-200">Eventos</a>
+    <a href="#contacto" class="hover:text-blue-200">Contacto</a>
+    <a href="../sites/profile.html" class="hover:text-blue-200">Perfil</a>
+    <button id="openModal" class="text-white">Registrarse</button>
+  </nav>
+</header>
+
+<!-- Mobile Menu (hidden initially) -->
+<div id="mobileMenu" class="hidden md:hidden bg-blue-950 text-white p-4 space-y-4">
+  <a href="../sites/index.html" class="block hover:text-blue-200">Inicio</a>
+  <a href="#eventos" class="block hover:text-blue-200">Eventos</a>
+  <a href="#contacto" class="block hover:text-blue-200">Contacto</a>
+  <a href="../sites/profile.html" class="block hover:text-blue-200">Perfil</a>
+  <button id="openModalMobile" class="text-white block">Registrarse</button>
+</div>
+
+<!-- Modal -->
+<div id="modal" class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center hidden z-50">
+  <div class="bg-white rounded-lg p-6 m-4 w-full max-w-md transform -translate-y-16 transition-transform duration-300 ease-in-out" id="modalContent">
+    <h2 class="text-xl mb-4">Formulario de Registro</h2>
+    <form>
+      <div class="flex flex-col mb-4">
+        <label for="fullname" class="mb-2">Nombre completo</label>
+        <input type="text" id="fullname" class="border border-gray-300 p-2 rounded" required>
+      </div>
+      <div class="flex flex-col mb-4">
+        <label for="email" class="mb-2">Email</label>
+        <input type="email" id="email" class="border border-gray-300 p-2 rounded" required>
+      </div>
+      <div class="flex flex-col mb-4">
+        <label for="password" class="mb-2">Contraseña</label>
+        <input type="password" id="password" class="border border-gray-300 p-2 rounded" required>
+      </div>
+      <div class="flex flex-col mb-4">
+        <label for="confirmPassword" class="mb-2">Confirmación de contraseña</label>
+        <input type="password" id="confirmPassword" class="border border-gray-300 p-2 rounded" required>
+      </div>
+      <button type="submit" class="bg-blue-600 text-white p-2 rounded hover:bg-blue-700 transition">Registrarse</button>
+    </form>
+    <button id="closeModal" class="mt-4 text-red-500">Cerrar</button>
+  </div>
+</div>
+
+<script>
+  const menuButton = document.getElementById('menu-button');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const openModal = document.getElementById('openModal');
+  const openModalMobile = document.getElementById('openModalMobile');
+  const modal = document.getElementById('modal');
+  const closeModal = document.getElementById('closeModal');
+  const modalContent = document.getElementById('modalContent');
+
+  menuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+
+  openModal.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    setTimeout(() => {
+      modalContent.classList.remove('-translate-y-16');
+    }, 10);
+  });
+
+  openModalMobile.addEventListener('click', () => {
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    mobileMenu.classList.add('hidden'); 
+    setTimeout(() => {
+      modalContent.classList.remove('-translate-y-16');
+    }, 10);
+  });
+
+  closeModal.addEventListener('click', () => {
+    modalContent.classList.add('-translate-y-16');
+    setTimeout(() => {
+      modal.classList.add('hidden');
+    }, 300); 
+  });
+</script>

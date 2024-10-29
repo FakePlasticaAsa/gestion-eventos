@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Perfil de Usuario</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../script/template.js"></script>
+</head>
+
+<body>
+    <header id="header"></header>
+    <div class="mb-16">
+        <h1 class="text-3xl flex justify-center pt-6">Perfil de Usuario</h1>
+
+        <!-- Información Personal -->
+        <div class="p-12">
+            <h2 class="text-2xl flex justify-center pt-12">Información Personal</h2>
+            <div class="flex justify-center pt-2">
+                <img class="w-24 h-auto rounded-full" src="../img/pfp.webp" alt="Foto de perfil">
+            </div>
+            <form class="flex-col flex max-w-md mx-auto">
+                <label for="name" class="text-sm font-medium m-4">Nombre:</label>
+                <input type="text" name="name" value="Nombre del Usuario" class="p-2 border border-gray-300 rounded-lg">
+
+                <label for="email" class="text-sm font-medium m-4">Email:</label>
+                <input type="email" name="email" value="email@ejemplo.com"
+                    class="p-2 border border-gray-300 rounded-lg mb-6">
+
+                <button class="bg-blue-500 p-2 rounded-lg hover:bg-blue-600" type="submit">Guardar Cambios</button>
+            </form>
+        </div>
+
+        <!-- Eventos del Usuario -->
+        <div class="user-events">
+            <h2 class="text-2xl flex justify-center p-6">Eventos del Usuario</h2>
+            <table class="flex flex-col">
+                <thead class="">
+                    <tr class="flex justify-around">
+                        <th class="">Nombre</th>
+                        <th class="">Fecha</th>
+                        <th class="">Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="flex justify-around bg-slate-300">
+                        <td class="ml-5">Evento</td>
+                        <td class="ml-7">2024-11-01</td>
+                        <td class="">Registrado</td>
+                    </tr>
+                    <tr class="flex justify-around">
+                        <td class="ml-5">Evento</td>
+                        <td class="ml-7">2024-11-01</td>
+                        <td class="">Registrado</td>
+                    </tr>
+                    <tr class="flex justify-around bg-slate-300">
+                        <td class="ml-5">Evento</td>
+                        <td class="ml-7">2024-11-01</td>
+                        <td class="">Registrado</td>
+                    </tr>
+                    <tr class="flex justify-around ">
+                        <td class="ml-5">Evento</td>
+                        <td class="ml-7">2024-11-01</td>
+                        <td class="">Registrado</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer id="footer"></footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

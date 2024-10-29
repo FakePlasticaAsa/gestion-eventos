@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="../script/template.js"></script>
+    <title>Taller de Alfombras</title>
+</head>
+
+<body class="bg-zinc-950">
+    <header id="header"></header>
+    <h1 class="text-white text-5xl flex justify-center p-12">Taller de Alfombras</h1>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-6">
+
+        <!-- Sección 1 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-all duration-300">
+            <img src="../img/alfombra1.jpg" alt="Imagen Alfombra 1" class="w-full h-auto">
+            <h2 class="p-4 text-lg font-bold bg-gray-500">Alfombra Persa</h2>
+        </div>
+
+        <!-- Sección 2 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-all duration-300">
+            <img src="../img/alfombra2.jpg" alt="Imagen Alfombra 2" class="w-full h-auto">
+            <h2 class="p-4 text-lg font-bold bg-gray-500">Alfombra Kilim</h2>
+        </div>
+
+        <!-- Sección 3 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-all duration-300">
+            <img src="../img/alfombra3.jpg" alt="Imagen Alfombra 3" class="w-full h-auto">
+            <h2 class="p-4 text-lg font-bold bg-gray-500">Alfombra Oriental</h2>
+        </div>
+
+        <!-- Sección 4 -->
+        <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:scale-105 transition-all duration-300">
+            <img src="../img/alfombra4.jpg" alt="Imagen Alfombra 4" class="w-full h-auto">
+            <h2 class="p-4 text-lg font-bold bg-gray-500">Alfombra Moderna</h2>
+        </div>
+    </div>
+
+    <div>
+        <h1 class="text-white text-3xl flex justify-center p-12">Descubre el Arte de Tejer Alfombras</h1>
+        <p class="text-white text-xl flex justify-center m-12 mb-32">Únete a nuestro taller de alfombras, donde aprenderás las técnicas y secretos de esta antigua tradición. Desde la creación de patrones únicos hasta el proceso de tejido a mano, cada sesión te llevará a explorar el arte de las alfombras. Disfruta de una experiencia creativa y aprende a hacer piezas únicas con historia y estilo. ¡No te pierdas la oportunidad de desarrollar tus habilidades en este arte fascinante!</p>
+    </div>
+
+    <div class="bg-gray-100 p-8 rounded-lg shadow-md max-w-md mx-auto mb-32">
+        <h2 class="text-2xl font-bold text-center mb-6">Inscripción al Taller de Alfombras</h2>
+        <form action="#" method="POST">
+            <div class="mb-4">
+                <label for="name" class="block text-gray-700 font-bold mb-2">Nombre:</label>
+                <input type="text" id="name" name="name" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Ingresa tu nombre">
+            </div>
+            <div class="mb-4">
+                <label for="email" class="block text-gray-700 font-bold mb-2">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Ingresa tu correo electrónico">
+            </div>
+            <div class="mb-4">
+                <label for="participants" class="block text-gray-700 font-bold mb-2">Número de Participantes:</label>
+                <input type="number" id="participants" name="participants" required class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Ingresa el número de participantes">
+            </div>
+            <div class="flex items-center justify-between">
+                <button type="submit" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+                    Inscribirse
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <footer id="footer"></footer>
+</body>
+
+</html>
